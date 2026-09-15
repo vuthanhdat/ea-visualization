@@ -1,0 +1,249 @@
+.drill-cta {
+  margin-top: 10px;
+}
+
+.drill-shell {
+  min-width: 0;
+}
+
+.drill-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 20px;
+  align-items: start;
+}
+
+.drill-canvas-panel {
+  min-width: 0;
+}
+
+.drill-breadcrumb {
+  flex-wrap: wrap;
+}
+
+.crumb-fragment {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crumb-button {
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary, #64748b);
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.crumb-button:hover {
+  color: var(--text-primary, #0f172a);
+}
+
+.depth-badge {
+  border: 1px solid var(--border, #dbe4ee);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--text-secondary, #64748b);
+  background: var(--surface, #fff);
+  white-space: nowrap;
+}
+
+.drill-graph {
+  width: 100%;
+  min-width: 980px;
+  display: block;
+}
+
+.drill-layer-band {
+  fill: rgba(248, 250, 252, .85);
+  stroke: rgba(148, 163, 184, .22);
+  stroke-width: 1;
+}
+
+.drill-layer-module { fill: rgba(239, 246, 255, .8); }
+.drill-layer-surface { fill: rgba(245, 243, 255, .78); }
+.drill-layer-domain { fill: rgba(240, 253, 250, .78); }
+.drill-layer-physical { fill: rgba(255, 251, 235, .82); }
+.drill-layer-platform { fill: rgba(248, 250, 252, .95); }
+
+.empty-drill-layer {
+  opacity: .34;
+}
+
+.drill-layer-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  fill: #334155;
+}
+
+.drill-layer-description {
+  font-size: 11px;
+  fill: #94a3b8;
+}
+
+.drill-edge {
+  fill: none;
+  stroke: #94a3b8;
+  stroke-width: 1.8;
+  opacity: .55;
+  transition: opacity .18s ease, stroke .18s ease, stroke-width .18s ease;
+}
+
+.drill-edge.active {
+  stroke: #2563eb;
+  stroke-width: 3;
+  opacity: 1;
+}
+
+.drill-edge.muted {
+  opacity: .12;
+}
+
+.drill-arrow-head {
+  fill: #94a3b8;
+}
+
+.drill-node {
+  cursor: pointer;
+  outline: none;
+  transition: opacity .18s ease;
+}
+
+.drill-node rect {
+  fill: #fff;
+  stroke: #cbd5e1;
+  stroke-width: 1.5;
+  transition: stroke .18s ease, stroke-width .18s ease, transform .18s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.drill-node-module rect { stroke: #60a5fa; }
+.drill-node-surface rect { stroke: #a78bfa; }
+.drill-node-domain rect { stroke: #2dd4bf; }
+.drill-node-physical rect { stroke: #f59e0b; }
+.drill-node-platform rect { stroke: #94a3b8; }
+
+.drill-node.selected rect,
+.drill-node.focus rect {
+  stroke: #2563eb;
+  stroke-width: 3;
+}
+
+.drill-node.selected rect {
+  transform: scale(1.035);
+}
+
+.drill-node.muted {
+  opacity: .22;
+}
+
+.drill-node-label {
+  font-size: 12px;
+  font-weight: 800;
+  fill: #0f172a;
+  pointer-events: none;
+}
+
+.drill-node-subtitle {
+  font-size: 10px;
+  fill: #64748b;
+  pointer-events: none;
+}
+
+.drill-node-plus {
+  font-size: 14px;
+  font-weight: 800;
+  fill: #2563eb;
+  pointer-events: none;
+}
+
+.drill-inspector {
+  position: sticky;
+  top: 16px;
+}
+
+.drill-kind-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 9px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border: 1px solid #cbd5e1;
+}
+
+.drill-kind-module { background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8; }
+.drill-kind-surface { background: #f5f3ff; border-color: #ddd6fe; color: #6d28d9; }
+.drill-kind-domain { background: #f0fdfa; border-color: #99f6e4; color: #0f766e; }
+.drill-kind-physical { background: #fffbeb; border-color: #fde68a; color: #a16207; }
+.drill-kind-platform { background: #f8fafc; border-color: #cbd5e1; color: #475569; }
+
+.drill-detail-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 7px;
+  color: #475569;
+  font-size: 13px;
+}
+
+.drill-empty-inspector {
+  display: grid;
+  gap: 12px;
+}
+
+.semantic-path-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.semantic-path-example span {
+  display: inline-flex;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.semantic-path-example b {
+  color: #94a3b8;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .drill-node:hover rect {
+    stroke-width: 2.5;
+  }
+}
+
+@media (max-width: 980px) {
+  .drill-main {
+    grid-template-columns: 1fr;
+  }
+
+  .drill-inspector {
+    position: static;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drill-node,
+  .drill-node rect,
+  .drill-edge {
+    transition: none;
+  }
+}
